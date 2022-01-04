@@ -26,13 +26,13 @@
   height: 100%;
   text-align: center;
   overflow: visible !important;
-  transition: transform 2s;
+  transition: transform 0.7s;
   transform-style: preserve-3d;
 }
 
 /*  class to toggle flipping*/
 .is-flipped {
-  /* transition-delay: .3s; */
+  transition: transform 0.7s;
   transform: rotateY(-180deg);
 }
 
@@ -55,7 +55,7 @@
   align-items: center;
   background-color: rgb(255, 255, 255);
   color: black;
-  transform: translateZ(1px); 
+  transform: translateZ(1px);
 }
 
 .flip-card-front img {
@@ -68,17 +68,18 @@
 .flip-card-back {
   background-color: rgb(255, 255, 255);
   color: black;
-  transform: rotateY(180deg) translateZ(-1px);
+  transform: rotateY(-180deg) translateZ(-1px);
 }
-
-
+.flip-card-back p {
+  transform: rotateY(-180deg);
+}
 
 /*  corner curl code*/
 .curl-bottom-right {
   display: inline-block;
   position: relative;
   /* controls the speed of the curl */
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
 
   background-image: linear-gradient(315deg, transparent 30px, rgb(255, 255, 255) 30px);
   background-position: 340px 220px;
