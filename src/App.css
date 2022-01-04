@@ -1,28 +1,13 @@
-/* .slider {
-  position: relative;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition-duration: 1s ease;
-} */
-
 .flashcard-main-container{
   max-width: 45rem;
-  /* background-color: rgb(198, 227, 220); */
 }
 
-.slide .flash-card-container {
+.flash-card-container {
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.slide.active {
-opacity: 1;
-transition-duration: 1s;
-/* transform: scale(1.08); */
+  opacity: 1;
+  transition-duration: 1s;
 }
 
 .carousel-container {

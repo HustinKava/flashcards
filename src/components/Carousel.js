@@ -17,28 +17,23 @@ const Carousel = (props) => {
     <>
       {props.items.map((items, index) => {
         return (
-
-          <div className='carousel-container'>
-
-            <div
-              className={index === current ? 'slide active' : 'slide'}
-              key={items.index}
-
-            >
-              {index === current && ( //Carousel items will appear below:
-                <Card
+          <>
+            {index === current && ( //Carousel items will appear below:
+              <div
+                className={'carousel-container'}
                 key={items.index}
-                src={items.img}
-                alt={items.img}
+              >
+                <Card
+                  key={items.index}
+                  src={items.img}
+                  alt={items.img}
                 />
-                // <img src={items.img} alt={items.img} />
-              )}
-            </div>
-
-          </div>
+              </div>
+            )}
+          </>
         )
       })}
-      <Bottom 
+      <Bottom
         prevSlide={prevSlide}
         nextSlide={nextSlide}
       />
