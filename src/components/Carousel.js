@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Card from './Card'
 
 const Carousel = (props) => {
   const [current, setCurrent] = useState(0)
@@ -17,9 +18,16 @@ const Carousel = (props) => {
         return (
           <div
             className={index === current ? 'slide active' : 'slide'}
+            key={items.index}
+
           >
             {index === current && ( //Carousel items will appear below:
-              <img src={items.img} alt={items.img} />
+              <Card
+              key={items.index}
+              src={items.img}
+              alt={items.img}
+              />
+              // <img src={items.img} alt={items.img} />
             )}
           </div>
         )

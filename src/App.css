@@ -1,4 +1,4 @@
-.slider {
+/* .slider {
   position: relative;
   height: 90vh;
   display: flex;
@@ -6,21 +6,25 @@
   align-items: center;
   opacity: 0;
   transition-duration: 1s ease;
+} */
+
+.flashcard-main-container{
+  max-width: 36rem;
+  background-color: rgb(198, 227, 220);
 }
 
-.slide img {
-  width: 700px;
-  height: 600px;
-  border-radius: 10px;
+.slide .flash-card-container {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+
+
 .slide.active {
 opacity: 1;
 transition-duration: 1s;
-transform: scale(1.08);
+/* transform: scale(1.08); */
 }
 
 .next-arrow {
