@@ -1,10 +1,10 @@
 .flash-card-container {
   background-color: transparent;
   width: 300px;
-  height: 200px;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
   /* This allows the shadow to wrap around the item with the clip path is applied  */
   filter: drop-shadow(3px 3px 3px rgba(50, 50, 0, 0.4));
+  padding-bottom: 20px;
 }
 
 .flip-card-btn {
@@ -100,9 +100,8 @@
   right: 0;
 
   background: linear-gradient(315deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
-  /* filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000'); */
   /*For IE7-8-9*/
-
+  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000');
   z-index: 1000;
   -webkit-transition-duration: inherit;
   transition-duration: inherit;
