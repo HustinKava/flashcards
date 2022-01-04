@@ -6,7 +6,6 @@ import Bottom from './Bottom';
 function Carousel(props) {
 
   const [current, setCurrent] = useState(0)
-  var randItems = false;
 
   const nextSlide = () => { //Next Carousel button
     setCurrent(current === props.items.length - 1 ? 0 : current + 1);
@@ -17,16 +16,11 @@ function Carousel(props) {
   };
 
   function randSlide() { //Random Carousel button
-    if (!randItems) {
-      for (let i = props.items.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        const temp = props.items[i];
-        props.items[i] = props.items[j];
-        props.items[j] = temp;
-      }
-      randItems = true;
-    } else {
-      randItems = false;
+    for (let i = props.items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = props.items[i];
+      props.items[i] = props.items[j];
+      props.items[j] = temp;
     }
   }
 
