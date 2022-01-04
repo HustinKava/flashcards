@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Card from './Card';
+import Top from './Top';
 import Bottom from './Bottom';
 
-const Carousel = (props) => {
+function Carousel(props) {
+
   const [current, setCurrent] = useState(0)
   var randItems = false;
 
@@ -30,7 +32,10 @@ const Carousel = (props) => {
 
   return (
     <>
-      {props.items.map((items, index) => {
+      <Top
+        instruction={props.items.instruction}
+      />
+      {props.items.data.map((items, index) => {
         return (
           <>
             {index === current && ( //Carousel items will appear below:
@@ -58,3 +63,4 @@ const Carousel = (props) => {
 }
 
 export default Carousel
+

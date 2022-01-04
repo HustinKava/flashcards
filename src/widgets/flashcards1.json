@@ -1,4 +1,5 @@
-{
+{   
+    "instruction": "Intro text. What is the natural habitat of these animals? Click the card to reveal the answer.",
     "data": [{
             "img": "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
             "textValue": "Card 1"
