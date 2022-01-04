@@ -25,10 +25,10 @@ return (
             <div className="flip-card-inner">
                 <div className="flip-card-front">
                     <img
-                        src={props.alt}
+                        src={props.src}
                         alt={props.alt}
                     />
-                    <p>Word here</p>
+                    <p>{props.alt}</p>
                 </div>
                 {/* Content on the back of the card goes in flip-card-back */}
                 <div className="flip-card-back">
