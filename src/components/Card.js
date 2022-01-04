@@ -1,17 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Card = (props) => {
+    const [isFlipped, setIsFlipped] = useState(false)
 
-    function flip(e) {
-        // If OS animations have been disabled
-        var cardContainer = e.currentTarget;
-        const flipCardInner = cardContainer.children[0].children[0]
-        if (props.reduceMotion) {
-            // Add reduced motion toggle in here
+    function flip() {
+        if(!isFlipped){
+            setIsFlipped(true)
+        } else {
+            setIsFlipped(false)
         }
-        cardContainer.classList.toggle("is-flipped");
-        flipCardInner.classList.toggle("is-flipped");
-
     };
 
 
@@ -19,12 +16,12 @@ const Card = (props) => {
 
     return (
         <div
-            className="flash-card-container"
+            className={"flash-card-container " + (isFlipped ? "is-flipped" : "")} 
             onClick={flip}
         >
-            <button className="flip-card-btn curl-bottom-right">
+            <button className={"flip-card-btn " + (isFlipped ? "curl-bottom-left" : "curl-bottom-right")}>
                 {/* container required to flip container and content together */}
-                <div className="flip-card-inner">
+                <div className={"flip-card-inner " + (isFlipped ? "is-flipped" : "")}>
                     <div className="flip-card-front">
                         <img
                             src={props.alt}

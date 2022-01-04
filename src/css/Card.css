@@ -122,3 +122,57 @@
   /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%
     ); */
 }
+
+
+
+
+/*  corner curl in reverse corner(flipped) code*/
+.curl-bottom-left {
+  display: inline-block;
+  position: relative;
+  /* controls the speed of the curl */
+  transition: all 0.2s ease;
+
+  background-image: linear-gradient(45deg, transparent 30px, rgb(255, 255, 255) 30px);
+  background-position: 340px 220px;
+  background-size: 200% 200%;
+
+  /* gives a start point for the clip animation to add and remove */
+  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%
+    ); */
+  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
+}
+
+.curl-bottom-left:before {
+  /* pointer-events: auto !important; */
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 260px;
+
+  background: linear-gradient(45deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
+  /*For IE7-8-9*/
+  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000');
+  z-index: 1000;
+  -webkit-transition-duration: inherit;
+  transition-duration: inherit;
+  -webkit-transition-property: width, height;
+  transition-property: width, height;
+}
+
+.curl-bottom-left:hover:before {
+  width: 40px;
+  height: 40px;
+}
+
+.curl-bottom-left:hover {
+  /*   background-position: 150px 120px; */
+  /* cuts out the background of the div when the corner is curled up */
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 13% 100%, 0% 80%); */
+  clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%)
+
+  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%
+    ); */
+}
