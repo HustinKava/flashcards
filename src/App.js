@@ -5,7 +5,7 @@ import { Data } from './components/Data';
 
 function App() {
   return (
-    <main className="flexbox">
+    <main className="flashcard-main-container">
         <Carousel
           items={Data} />
     </main>

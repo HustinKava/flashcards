@@ -1,4 +1,4 @@
-.slider {
+/* .slider {
   position: relative;
   height: 90vh;
   display: flex;
@@ -6,6 +6,11 @@
   align-items: center;
   opacity: 0;
   transition-duration: 1s ease;
+} */
+
+.flashcard-main-container{
+  max-width: 36rem;
+  background-color: rgb(198, 227, 220);
 }
 
 .slide .flash-card-container {
