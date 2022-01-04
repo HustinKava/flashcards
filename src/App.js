@@ -1,4 +1,5 @@
 import './App.css';
+import './css/Card.css';
 import Carousel from './components/Carousel';
 import { Data } from './components/Data';
 
