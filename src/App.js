@@ -1,12 +1,12 @@
 import './App.css';
 import Carousel from './components/Carousel';
-import { Data } from './components/Data';
+import Flashcards from './widgets/flashcards1.json'
 
 function App() {
   return (
     <main className="flexbox">
         <Carousel
-          items={Data} />
+          items={Flashcards.data} />
     </main>
   );
 }
