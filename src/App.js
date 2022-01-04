@@ -7,7 +7,8 @@ function App() {
   return (
     <main className="flashcard-main-container">
         <Carousel
-          items={Flashcards} />
+          instruction={Flashcards.instruction}
+          items={Flashcards.data} />
     </main>
   );
 }
