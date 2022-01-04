@@ -32,6 +32,7 @@ function Carousel(props) {
                   key={items.index}
                   src={items.img}
                   alt={items.img}
+                  reduceMotion={props.reduceMotion}
                 />
               </div>
             )}

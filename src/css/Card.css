@@ -75,7 +75,7 @@
   transform: rotateY(-180deg);
 }
 
-/*  corner curl code*/
+/*  corner curl in right corner (not flipped) code*/
 .curl-bottom-right {
   display: inline-block;
   position: relative;
