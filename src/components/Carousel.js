@@ -33,9 +33,9 @@ function Carousel(props) {
   return (
     <>
       <Top
-        instruction={props.items.instruction}
+        instruction={props.instruction}
       />
-      {props.items.data.map((items, index) => {
+      {props.items.map((items, index) => {
         return (
           <>
             {index === current && ( //Carousel items will appear below:
