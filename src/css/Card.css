@@ -5,6 +5,7 @@
   /* This allows the shadow to wrap around the item with the clip path is applied  */
   filter: drop-shadow(3px 3px 3px rgba(50, 50, 0, 0.4));
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .flip-card-btn {
