@@ -5,7 +5,7 @@ import Bottom from './Bottom';
 
 var oneTimeCodeRun = true;
 var randItems = false;
-var oldItems = []
+var oldItems = [];
 
 function Carousel(props) {
 
@@ -66,7 +66,8 @@ function Carousel(props) {
       <Bottom
         prevSlide={prevSlide}
         nextSlide={nextSlide}
-        shufftleSlide={randSlide}
+        randSlide={randSlide}
+        randClassName={randItems ? "rand-arrow active" : "rand-arrow"}
       />
     </>
   )
