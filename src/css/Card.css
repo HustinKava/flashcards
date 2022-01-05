@@ -26,14 +26,14 @@
   height: 100%;
   text-align: center;
   overflow: visible !important;
-  transition: transform 0.7s;
+  transition: transform 0.3s;
   transform-style: preserve-3d;
 }
 
 /*  class to toggle flipping*/
 .is-flipped {
-  transition: transform 0.7s;
-  transform: rotateY(-180deg);
+  transition: transform 0.3s;
+  transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
@@ -68,7 +68,7 @@
 .flip-card-back {
   background-color: rgb(255, 255, 255);
   color: black;
-  transform: rotateY(-180deg) translateZ(-1px);
+  transform: rotateY(180deg) translateZ(-1px);
 }
 .flip-card-back p {
   transform: rotateY(-180deg);
@@ -86,9 +86,8 @@
   background-size: 200% 200%;
 
   /* gives a start point for the clip animation to add and remove */
-  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%
-    ); */
   clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
 }
 
 .curl-bottom-right:before {
@@ -102,7 +101,7 @@
 
   background: linear-gradient(315deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
   /*For IE7-8-9*/
-  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000');
+  /* filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000'); */
   z-index: 1000;
   -webkit-transition-duration: inherit;
   transition-duration: inherit;
@@ -119,8 +118,7 @@
   /*   background-position: 150px 120px; */
   /* cuts out the background of the div when the corner is curled up */
   clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%);
-  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%
-    ); */
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%);
 }
 
 
@@ -138,10 +136,8 @@
   background-size: 200% 200%;
 
   /* gives a start point for the clip animation to add and remove */
-  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%
-    ); */
   clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 100%);
-  /* clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%) */
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 100%);
 
 }
 
@@ -157,7 +153,7 @@
 
   background: linear-gradient(315deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
   /*For IE7-8-9*/
-  filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000');
+  /* filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000'); */
   z-index: 1000;
   -webkit-transition-duration: inherit;
   transition-duration: inherit;
@@ -173,9 +169,6 @@
 .curl-bottom-left:hover {
   /*   background-position: 150px 120px; */
   /* cuts out the background of the div when the corner is curled up */
-  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 13% 100%, 0% 80%); */
-  clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%)
-
-  /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 85% 100%, 100% 80%
-    ); */
+  clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%);
+  -webkit-clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%);
 }
