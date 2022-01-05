@@ -6,6 +6,7 @@ function Bottom(props) {
         <div className='bottom-container'>
             <button className='prev-arrow' onClick={props.prevSlide} />
             <button className='next-arrow' onClick={props.nextSlide} />
+            <button className='rand-arrow' onClick={props.shufftleSlide}>Shuffle</button>
         </div>
     )
 }
