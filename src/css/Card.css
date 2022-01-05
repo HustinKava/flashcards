@@ -140,7 +140,9 @@
   /* gives a start point for the clip animation to add and remove */
   /* -webkit-clip-path: clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%
     ); */
-  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0%, 0% 0%, 0% 100%, 0% 100%, 100% 100%, 100% 100%);
+  /* clip-path: polygon(100% 0%, 0% 0%, 0% 80%, 13% 100%, 100% 100%, 100% 80%) */
+
 }
 
 .curl-bottom-left:before {
@@ -150,9 +152,10 @@
   height: 0;
   width: 0;
   bottom: 0;
-  right: 260px;
+  left: 0;
+  transform: rotateY(180deg);
 
-  background: linear-gradient(45deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
+  background: linear-gradient(315deg, transparent 45%, #9b9b9b 50%, #cccccc 56%, rgb(238, 238, 238) 80%);
   /*For IE7-8-9*/
   filter: progid: DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='#ffffff', endColorstr='#000000');
   z-index: 1000;
